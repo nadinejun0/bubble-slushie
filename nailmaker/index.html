@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="shortcut icon" href="./polish.gif" type="image/x-icon">
+    <link rel="shortcut icon" href="polish.gif" type="image/x-icon">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nailz Maker</title>
-    <link rel="stylesheet" href="./nailz.css">
-    <script src="./scripts/html2canvas.min.js"></script>
-    <script src="./scripts/nailzmaker.min.js"></script>
-    <script src="./scripts/save.js"></script>
+    <link rel="stylesheet" href="nailz.css">
+    <script src="scripts/html2canvas.min.js"></script>
+    <script src="scripts/nailzmaker.min.js"></script>
+    <script src="scripts/save.js"></script>
 </head>
 
 <body>
@@ -55,8 +55,8 @@
 
         <div id="controls" class="grid">
             <sub>Controls</sub>
-            <button id="save" onclick="saveDropZone()"><img src="./ui/save.png" alt="Save"></button>
-            <button id="reset" onclick="clearAllZones()"><img src="./ui/reset.png" alt="Reset"></button>
+            <button id="save" onclick="saveDropZone()"><img src="ui/save.png" alt="Save"></button>
+            <button id="reset" onclick="clearAllZones()"><img src="ui/reset.png" alt="Reset"></button>
         </div>
 
         <div id="props-container">
@@ -70,11 +70,11 @@
         </div>
     </main>
 
-    <script src="./scripts/drop.min.js"></script>
+    <script src="scripts/drop.min.js"></script>
     <script>
         function setNailShape(left, right) {
-            document.getElementById('left').src = `./imgs/sets/${left}`;
-            document.getElementById('right').src = `./imgs/sets/${right}`;
+            document.getElementById('left').src = `imgs/sets/${left}`;
+            document.getElementById('right').src = `imgs/sets/${right}`;
         }
 
         function clearAllZones() {
@@ -91,7 +91,7 @@
 
         async function loadCharms() {
             try {
-                const response = await fetch('./charms.json');
+                const response = await fetch('charms.json');
                 const images = await response.json();
                 const charmsDiv = document.getElementById('scrollbox');
                 const dynamicContainer = document.createElement('div');
@@ -99,7 +99,7 @@
 
                 images.forEach(fileName => {
                     const img = document.createElement('img');
-                    img.src = `./imgs/charms/${fileName}`;
+                    img.src = `imgs/charms/${fileName}`;
                     img.classList.add('gallery-item');
                     img.alt = fileName.split('.')[0];
 
