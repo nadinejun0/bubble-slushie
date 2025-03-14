@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="shortcut icon" href="./polish.gif" type="image/x-icon">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nailz Maker</title>
+    <link rel="stylesheet" href="nailz.css">
+    <script src="/scripts/html2canvas.min.js"></script>
+    <script src="/scripts/nailzmaker.min.js"></script>
+    <script src="/scripts/save.js"></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="flist">
+            
+            <h1 style="font-size: 50px; line-height: 50px;">Nailz Maker</h1>
+            <ul>
+                <li>Click to add <b>props</b> to the drop zone, then drag them into position.</li>
+                <li><b>Double-click</b> a prop to remove it from the drop zone.</li>
+                <li>Use the controls to <b>reset and save</b> your work.</li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Drop zone for freely moving items -->
+        <div id="drop-zone" class="drop-zone">
+            <sub>Drop Zone</sub>
+            <div id="nail-zone">
+                <img id="single" src="" alt="">
+                <div class="nail-flex">
+                    <div id="leftset"><img id="left" src="" alt=""></div>
+                    <div class="rightset"><img id="right" src="" alt=""></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="color" class="grid"><sub>Color</sub></div>
+
+        <div id="shapes" class="grid">
+            <sub>Shapes</sub>
+            <div class="btn-group">
+                <button class="almond short" onclick="setNailShape('Almond-Short-L.png', 'Almond-Short-R.png')">
+                    Almond Short
+                </button>
+                <button class="btn almond long" onclick="setNailShape('Almond-LONG.png', 'Almond-LONG.png')">
+                    Almond Long
+                </button>
+            </div>
+        </div>
+
+        <div id="controls" class="grid">
+            <sub>Controls</sub>
+            <button id="save" onclick="saveDropZone()"><img src="./ui/save.png" alt="Save"></button>
+            <button id="reset" onclick="clearAllZones()"><img src="/nailmaker/ui/reset.png" alt="Reset"></button>
+        </div>
+
+        <div id="props-container">
+            <div id="charms" class="prop">
+                <sub>Charms</sub>
+                <div id="scrollbox"></div>
+            </div>
+            <div id="glitter" class="prop"><sub>Glitter</sub></div>
+            <div id="stickers" class="prop"><sub>Stickers</sub></div>
+            <div id="airbrush" class="prop"><sub>Airbrush</sub></div>
+        </div>
+    </main>
+
+    <script src="/scripts/drop.min.js"></script>
+    <script>
+        function setNailShape(left, right) {
+            document.getElementById('left').src = `/nailmaker/imgs/sets/${left}`;
+            document.getElementById('right').src = `/nailmaker/imgs/sets/${right}`;
+        }
+
+        function clearAllZones() {
+            const dropZone = document.getElementById('drop-zone');
+            const nailZone = document.getElementById('nail-zone');
+
+            dropZone.innerHTML = '<sub>Drop Zone</sub>';
+            dropZone.appendChild(nailZone);
+
+            document.getElementById('single').src = "";
+            document.getElementById('left').src = "";
+            document.getElementById('right').src = "";
+        }
+
+        async function loadCharms() {
+            try {
+                const response = await fetch('/nailmaker/charms.json');
+                const images = await response.json();
+                const charmsDiv = document.getElementById('scrollbox');
+                const dynamicContainer = document.createElement('div');
+                dynamicContainer.id = 'charms-dynamic';
+
+                images.forEach(fileName => {
+                    const img = document.createElement('img');
+                    img.src = `/nailmaker/imgs/charms/${fileName}`;
+                    img.classList.add('gallery-item');
+                    img.alt = fileName.split('.')[0];
+
+                    img.addEventListener('click', function () {
+                        const clone = img.cloneNode(true);
+                        clone.style.position = "absolute";
+                        clone.style.left = "50px";
+                        clone.style.top = "50px";
+                        attachDragEvents(clone);
+                        document.getElementById("drop-zone").appendChild(clone);
+                    });
+
+                    dynamicContainer.appendChild(img);
+                });
+
+                charmsDiv.appendChild(dynamicContainer);
+            } catch (error) {
+                console.error('Error loading images:', error);
+            }
+        }
+
+        function attachDragEvents(el) {
+            const dropZone = document.getElementById("drop-zone");
+            el.addEventListener("mousedown", function (e) {
+                e.preventDefault();
+                const elRect = el.getBoundingClientRect();
+                const dzRect = dropZone.getBoundingClientRect();
+                const offsetX = e.clientX - elRect.left;
+                const offsetY = e.clientY - elRect.top;
+
+                function moveHandler(ev) {
+                    let newLeft = ev.pageX - offsetX - dzRect.left;
+                    let newTop = ev.pageY - offsetY - dzRect.top;
+                    newLeft = Math.max(0, Math.min(newLeft, dropZone.offsetWidth - el.offsetWidth));
+                    newTop = Math.max(0, Math.min(newTop, dropZone.offsetHeight - el.offsetHeight));
+
+                    el.style.left = `${newLeft}px`;
+                    el.style.top = `${newTop}px`;
+                }
+
+                function upHandler() {
+                    document.removeEventListener("mousemove", moveHandler);
+                    document.removeEventListener("mouseup", upHandler);
+                }
+
+                document.addEventListener("mousemove", moveHandler);
+                document.addEventListener("mouseup", upHandler);
+            });
+
+            el.ondragstart = () => false;
+        }
+
+        loadCharms();
+    </script>
+
+</body>
+</html>

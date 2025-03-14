@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sourdough Aliquot Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sourdough Aliquot Calculator</h1>
+        <p class="description">Calculate your sourdough fermentation using the Aliquot method.</p>
+        
+        <div class="calculator">
+            <div class="input-section">
+                <h2>Starting Parameters</h2>
+                
+                <div class="form-group">
+                    <label for="dough-temp">Initial Dough Temperature (°F):</label>
+                    <div class="tooltip-wrapper">
+                        <input type="number" id="dough-temp" value="72" required>
+                        <span class="tooltip">The temperature of your dough after mixing all ingredients. This is the main factor that determines fermentation time and aliquot target rise.</span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="flour-type">Flour Type:</label>
+                    <div class="tooltip-wrapper">
+                        <select id="flour-type">
+                            <option value="ap">All Purpose (AP)</option>
+                            <option value="bread" selected>Bread Flour</option>
+                            <option value="whole-wheat">Whole Wheat</option>
+                        </select>
+                        <span class="tooltip">Different flour types ferment at different rates. Whole wheat ferments faster than bread flour, which ferments faster than all-purpose.</span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="hydration">Hydration (%):</label>
+                    <div class="tooltip-wrapper">
+                        <input type="number" id="hydration" value="75" required>
+                        <span class="tooltip">Higher hydration (>80%) may ferment slightly faster. Lower hydration (<70%) may ferment slower.</span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="starter-percent">Starter Percentage (%):</label>
+                    <div class="tooltip-wrapper">
+                        <input type="number" id="starter-percent" value="20" required>
+                        <span class="tooltip">Higher starter percentage leads to faster fermentation. Lower percentages allow more flavor development.</span>
+                    </div>
+                </div>
+                
+                <div class="advanced-toggle">
+                    <a href="#" id="toggle-advanced">Show Advanced Options ▼</a>
+                </div>
+                
+                <div id="advanced-options" class="advanced-options hidden">
+                    <div class="form-group">
+                        <div class="tooltip-wrapper">
+                            <h3>Advanced options are not yet available.</h3>
+                            <p>Only temperature, flour type, hydration, and starter % affect the calculation results. This is a placeholder!</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="button" id="calculate-btn">Calculate</button>
+            </div>
+            
+            <div class="result-section">
+                <h2>Fermentation Plan</h2>
+                <div id="result-data">
+                    <div class="result-item">
+                        <h3>Target Aliquot Jar Rise</h3>
+                        <div class="progress-container">
+                            <div class="progress-bar">
+                                <div id="progress-fill" class="progress-fill" style="width: 0%;"></div>
+                            </div>
+                            <span id="progress-percent">0%</span>
+                        </div>
+                    </div>
+
+                    <div class="result-item">
+                        <h3>Sample Size (2oz cup)</h3>
+                        <p id="sample-size">-- g</p>
+                    </div>
+                    
+                    <div class="result-item">
+                        <h3>Estimated Fermentation Window</h3>
+                        <p id="bulk-time">-- to -- hours</p>
+                    </div>
+                    
+                    <div class="toggle-section">
+                        <a href="#" id="toggle-water-calc">Show Water Temperature Calculator ▼</a>
+                    </div>
+                    
+                    <div id="water-calc-section" class="result-item two-column hidden">
+                        <div>
+                            <h3>Water Temperature Calculator</h3>
+                            <p class="helper-text">Calculate the water temperature needed to achieve your target dough temperature.</p>
+                            <div class="nested-form-group">
+                                <label for="room-temp">Room Temp (°F):</label>
+                                <input type="number" id="room-temp" value="71.6" required>
+                            </div>
+                            <div class="nested-form-group">
+                                <label for="flour-temp">Flour Temp (°F):</label>
+                                <input type="number" id="flour-temp" value="71.6" required>
+                            </div>
+                            <div class="nested-form-group">
+                                <label for="target-dough-temp">Target Dough Temp (°F):</label>
+                                <div class="tooltip-wrapper inline">
+                                    <input type="number" id="target-dough-temp" value="75.2" required>
+                                    <span class="tooltip">Ideal dough temperature affects fermentation rate. 72-75°F is typically considered optimal.</span>
+                                </div>
+                            </div>
+                            <div class="water-temp-result">
+                                <p>Water Temperature: <span id="water-temp">--</span> °F</p>
+                            </div>
+                            <p class="formula-text">Formula: Target Dough Temp × 3 - (Room Temp + Flour Temp) = Water Temp</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline" id="timeline-container">
+                    <!-- Timeline will be generated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="method-info">
+            <h2>About the Aliquot Method</h2>
+            <p>The Aliquot method involves placing a small sample of your dough in a straight-sided container to monitor 
+            fermentation progress. This sample expands at the same rate as your main dough, acting as a visual indicator 
+            of fermentation progress.</p>
+            
+            <p><strong>How to use the Aliquot jar:</strong></p>
+            <ol>
+                <li>Take a small sample (as recommended by calculator) of final dough after completing stretch and folds</li>
+                <li>Use a small straight-sided container (small jar, condiment container, shot glass)</li>
+                <li>Fill the jar about halfway with dough sample</li>
+                <li>Wet fingers and push dough into bottom of jar as much as possible</li>
+                <li>Place the jar directly into the top of the main dough to maintain same temperature</li>
+                <li>Bulk fermentation is complete when the jar reaches the target rise percentage</li>
+            </ol>
+            
+            <p><strong>Note:</strong> The most reliable method is tracking actual dough rise, not time. Use the time estimates as a planning guide only.</p>
+        </div>
+    </div>
+    
+    <script src="calculator.js"></script>
+</body>
+</html>

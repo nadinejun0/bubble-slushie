@@ -1,0 +1,314 @@
+/* -------------------------------------
+   Variables
+------------------------------------- */
+/* -------------------------------------
+   Global Reset & Base
+------------------------------------- */
+* {
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 1px;
+}
+
+body {
+  font-family: "rainyhearts", sans-serif;
+  background-color: #FFF8F0;
+  color: #333;
+  line-height: 1.6;
+  margin: 20px;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "rainyhearts", sans-serif;
+  letter-spacing: 0.1em;
+  margin: auto;
+  color: #FF1493;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+p {
+  font-family: "rainyhearts", sans-serif;
+  font-size: 16px;
+  margin-bottom: 1em;
+  color: #FF1493;
+}
+
+a {
+  font-family: "rainyhearts", sans-serif;
+  color: #FF1493;
+  text-decoration: none;
+  border-bottom: 1px dotted #FF1493;
+  transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+a:hover, a:focus {
+  color: #FF1493;
+  border-bottom-color: #FF1493;
+}
+
+blockquote {
+  font-family: "rainyhearts", sans-serif;
+  font-style: italic;
+  margin: 1em 2em;
+  padding: 0.5em 1em;
+  border-left: 3px solid #FF1493;
+  background-color: #FFF0F5;
+}
+
+sub {
+  text-transform: uppercase;
+  color: #FF1493;
+  background-color: #FFF0F5;
+  width: 100%;
+  border: 1px solid #FF1493;
+  text-align: center;
+  height: fit-content;
+}
+
+ul,
+ol {
+  font-family: "rainyhearts", sans-serif;
+  margin: 1em 0;
+  padding-left: 20px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+ul li {
+  position: relative;
+  padding-left: 35px;
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  width: 20px;
+  height: 15;
+  background: url("imgs/nailz-images/charms/charm_52.png") no-repeat center center;
+  transform: translateY(-50%);
+}
+
+/* -------------------------------------
+   containerzone
+------------------------------------- */
+.container {
+  display: grid;
+  grid-template-areas: "drop-zone drop-zone drop-zone color" "shapes   shapes   shapes   controls" "props    props    props    controls";
+  grid-template-columns: 1fr 1fr 1fr 0.35fr;
+  grid-template-rows: 300px 100px auto;
+  gap: 10px;
+  max-width: 60em;
+  margin: auto;
+}
+
+.drop-zone, .grid {
+  border: 1px solid #FF1493;
+  background-color: #f1f1f1;
+  padding: 5px;
+  text-align: left;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.drop-zone {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  grid-area: 1/1/2/4;
+  text-align: center;
+  color: #FF1493;
+  text-transform: uppercase;
+  max-width: 100%;
+}
+
+#nail-zone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centers content vertically */
+  align-items: center;
+  height: 100%; /* now fills the full height of its container */
+  padding: 5px;
+  border: 1px solid purple;
+  background-size: 100% !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 99;
+}
+
+.nail-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  align-items: stretch;
+}
+.nail-flex div {
+  flex: 1; /* Let them take equal space */
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  border: 1px solid blue;
+  align-self: stretch;
+}
+.nail-flex img {
+  max-width: 200px;
+  height: auto;
+  display: block; /* prevents extra inline spacing */
+}
+
+#props-container {
+  grid-area: props;
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  border: 1px solid green;
+  padding: 5px;
+}
+
+.prop {
+  /* force each prop to 25% of the container width */
+  flex: 25%;
+  max-width: 25%;
+  /* stack label and content */
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #FF1493;
+  background-color: #f1f1f1;
+  padding: 5px;
+  text-align: center;
+  height: 150px;
+  box-sizing: border-box;
+}
+
+.prop #scrollbox {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  max-height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  border: 1px dotted #FF1493;
+}
+
+@media (max-width: 768px) {
+  #props-container {
+    flex-wrap: wrap;
+  }
+  .prop {
+    flex: 25%;
+    max-width: 100%;
+  }
+  .nail-flex {
+    flex-direction: column;
+  }
+}
+#scrollbox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  overflow-y: auto;
+  max-height: 200px;
+}
+
+#shapes {
+  grid-area: 2/1/3/4;
+  display: flex;
+  gap: 10px;
+  flex-basis: 100%;
+}
+
+#controls {
+  grid-area: 2/4/4/4;
+  z-index: 98;
+}
+
+#reset,
+#save {
+  display: flex;
+  padding: 15px;
+  margin: auto;
+}
+#reset img,
+#save img {
+  max-width: 90%;
+}
+
+/* Gallery styling */
+.gallery img {
+  cursor: pointer;
+  max-height: 100%;
+}
+
+/* Drop Zone positioning */
+#drop-zone {
+  position: relative;
+  overflow: hidden;
+}
+#drop-zone > img {
+  position: absolute;
+  cursor: move;
+  max-height: 150px;
+  padding: 25px;
+  border: 1px dotted transparent;
+  z-index: 100;
+}
+#drop-zone > img:hover {
+  border: 1px dotted #FF1493;
+}
+
+/* -------------------------------------
+   Footer & Info Box
+------------------------------------- */
+.infobox {
+  margin: auto;
+  text-align: center;
+  margin: 5px auto 5px auto;
+}
+
+.flist {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  position: relative;
+  margin: auto;
+  padding: 0 20px;
+  max-width: 40em;
+  border-radius: 20px;
+  line-height: 1.3rem;
+}
+
+button {
+  border: 3px double transparent;
+  background-color: transparent;
+  font-family: "rainyhearts", sans-serif;
+  margin: 10px auto 0px auto;
+  padding: 5px;
+}
+button:hover {
+  border: 3px double #FF1493;
+  border-radius: 5px;
+  background-color: #FFF0F5;
+  color: #FF1493;
+  opacity: 100%;
+}
+
+/*# sourceMappingURL=nailz.css.map */

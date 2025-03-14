@@ -1,0 +1,60 @@
+hr {
+    border: none;
+    height: 50px;
+    background: url("rNppgZ7.png") repeat-x center;
+}
+
+body {
+    font-family: monospace;
+    font-size: 7pt;
+    text-align: center;
+}
+
+.container table {
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.container td {
+    border: 3px double #ff5aff;
+    padding: 5px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.banner {
+    padding-top: 50px;
+}
+
+h2 {
+    display: block;
+    background-color: #e0ffff;
+    color: #00c0eb;
+    padding: 5px;
+    font-size: 10px;
+}
+
+.container textarea {
+
+    background: url("https://i.imgur.com/2HnyoGf.png");
+    background-color: #f2f0ff;
+    color: #b7b7ff;
+    border: 1px dotted pink;
+    font-family: arial;
+    font-size: 60px;
+    line-height: 22px;
+    letter-spacing: -7px;
+    width: 185px;
+    height: 60px;
+}
+
+.flossy {
+    position: fixed;
+    z-index: 20;
+    top: 500;
+    left: 1200;
+}
+
+.flossy img {
+    width: 200px;
+}
