@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Slushie Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        h1 {
+            color: #FF1493;
+            text-align: center;
+        }
+        .projects {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .project-card {
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        .project-card h2 {
+            margin-top: 0;
+        }
+        a {
+            color: #FF1493;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bubble Slushie Projects</h1>
+    
+    <div class="projects">
+        <div class="project-card">
+            <h2><a href="/canmake/index.html">Flossets 4 U</a></h2>
+            <p>A collection of adorable flosset designs</p>
+        </div>
+
+        <div class="project-card">
+            <h2><a href="/nailmaker/index.html">Nailz Maker</a></h2>
+            <p>Design your own nails with various charms and styles</p>
+        </div>
+
+        <div class="project-card">
+            <h2><a href="/sourdough-calculator/index.html">Sourdough Aliquot Calculator</a></h2>
+            <p>Calculate your sourdough fermentation using the Aliquot method</p>
+        </div>
+    </div>
+</body>
+</html>
