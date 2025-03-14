@@ -1,0 +1,268 @@
+/* -------------------------------------
+   Fonts & Variables
+------------------------------------- */
+/* -------------------------------------
+   Global Typography & Base Styles
+------------------------------------- */
+body {
+  font-family: "rainyhearts", sans-serif;
+  background-color: #FFF8F0;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "rainyhearts", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 1em 0 0.5em;
+  color: #FF1493;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+p {
+  font-family: "rainyhearts", sans-serif;
+  font-size: 16px;
+  margin-bottom: 1em;
+  color: #555;
+}
+
+a {
+  font-family: "rainyhearts", sans-serif;
+  color: #FF1493;
+  text-decoration: none;
+  border-bottom: 1px dotted #FF1493;
+  transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+a:hover, a:focus {
+  color: #FF1493;
+  border-bottom-color: #FF1493;
+}
+
+blockquote {
+  font-family: "rainyhearts", sans-serif;
+  font-style: italic;
+  margin: 1em 2em;
+  padding: 0.5em 1em;
+  border-left: 3px solid #FF1493;
+  background-color: #FFF0F5;
+}
+
+code {
+  font-family: monospace;
+  background-color: #F8F8F8;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  color: #c7254e;
+}
+
+/* -------------------------------------
+   Main Components
+------------------------------------- */
+/* Main Container for Objets */
+.objets {
+  display: flex;
+  flex-direction: column;
+  width: 230px;
+  margin: 0 auto 10px auto;
+  background-color: #c4fff7;
+  font-family: Verdana;
+  font-size: 9px;
+  color: #715796;
+}
+.objets h1 {
+  font-family: Verdana;
+  font-size: 10px;
+  font-weight: normal;
+  margin: 5px auto 0;
+  padding: 2px;
+  letter-spacing: 0.09em;
+  line-height: 0.9em;
+  text-align: center;
+  color: #ffffff;
+  width: 95%;
+  height: 11px;
+  border: 1px solid #715796;
+  background-color: #3e8ac6;
+}
+
+/* Box */
+.objetinner {
+  display: flex;
+  flex-direction: column;
+  width: 172px;
+  height: 186px;
+  margin: auto;
+  background-image: url("https://i.ibb.co/6PTTHvs/cab.png");
+}
+
+/* Scrolling Tray for Collections */
+.tray {
+  box-sizing: border-box;
+  width: 120px;
+  height: 43px;
+  top: 107px;
+  left: 26px;
+  border: 0;
+  position: relative;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  align-items: flex-end;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* Chrome, Edge, Safari Scrollbar */
+}
+.tray img {
+  margin: 3px;
+}
+.tray::-webkit-scrollbar {
+  height: 5px;
+}
+.tray::-webkit-scrollbar-thumb {
+  background-color: #fbd3b8;
+}
+.tray::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Area for Your Objets */
+.myobjets {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.myobjets img {
+  margin: 3px;
+}
+
+/* Global Scrollbar (Firefox) */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #fbd3b8;
+}
+
+/* -------------------------------------
+   Layout & Misc
+------------------------------------- */
+.container {
+  width: 100%;
+  height: 100vh;
+}
+
+.header {
+  padding-top: 120px;
+  max-width: fit-content;
+}
+
+.tamanotchi {
+  position: absolute;
+  margin-left: 800px;
+  margin-top: -80px;
+}
+
+.flex {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.left,
+.right {
+  height: 450px;
+  padding: 50px 0;
+  margin: -15px;
+  border: 1px solid transparent;
+}
+
+.mid {
+  display: flex;
+  position: relative;
+  border: 1px double black;
+  background-color: #FFF;
+  width: auto;
+  max-width: 800px;
+  z-index: 2;
+  box-shadow: 10px 10px 0px -4px #B90C80, 10px 10px 0px -3px black;
+}
+
+.box1,
+.box2,
+.box3 {
+  width: 200px;
+  padding: 25px;
+  border: 0;
+}
+
+/* Footer Stuff */
+.overimage {
+  position: relative;
+}
+
+.overimage-flower {
+  position: absolute;
+  z-index: 4;
+  margin: -130px;
+  transform: rotate(-23deg);
+  width: 180px;
+}
+
+.footer {
+  margin: auto;
+  width: 500px;
+  padding: 20px;
+  z-index: 5;
+}
+
+.counter,
+.imood {
+  position: absolute;
+  display: block;
+  margin: -30px;
+  z-index: 5;
+  width: 50px;
+}
+
+.imood {
+  border: none;
+  margin-top: 15px;
+}
+
+.moodtext,
+.moodtext::backdrop {
+  background-color: orange;
+}
+
+/* -------------------------------------
+   Lists
+------------------------------------- */
+ul,
+ol {
+  font-family: "rainyhearts", sans-serif;
+  margin: 1em 0;
+  padding-left: 20px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+ul li {
+  position: relative;
+  padding-left: 25px;
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  background: url("/images/bullets/U2BbrpL.png") no-repeat center center;
+  transform: translateY(-50%);
+}
+
+/*# sourceMappingURL=main.css.map */

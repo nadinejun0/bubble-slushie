@@ -1,0 +1,75 @@
+// _variables.scss
+
+$font-stack: 'rainyhearts', sans-serif;
+$pink: #FF1493;
+$cream: #FFF8F0;
+$text-color: #333;
+$secondary-text: #555;
+$blockquote-bg: #FFF0F5;
+$code-bg: #F8F8F8;
+$code-color: #c7254e;
+$scrollbar-color: #fbd3b8;
+
+
+body {
+  font-family: $font-stack;
+    
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-stack;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 1em 0 0.5em;
+  color: $pink; // a cute, girly pink
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+p {
+  font-family: $font-stack;
+  font-size: 16px;
+  margin-bottom: 1em;
+  color: $secondary-text;
+}
+
+a {
+  font-family: $font-stack;
+  color: $pink; // vibrant pink for links
+  text-decoration: none;
+  border-bottom: 1px dotted $pink;
+  transition: color 0.3s ease, border-bottom-color 0.3s ease;
+
+  &:hover,
+  &:focus {
+    color: $pink;
+    border-bottom-color: $pink;
+  }
+}
+
+blockquote {
+  font-family: $font-stack;
+  font-style: italic;
+  margin: 1em 2em;
+  padding: 0.5em 1em;
+  border-left: 3px solid $pink;
+  background-color: $blockquote-bg;
+}
+
+code {
+  font-family: monospace;
+  background-color: $code-bg;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  color: $code-color;
+}
+
+ /* Chrome, Edge, Safari Scrollbar */
+  &::-webkit-scrollbar {
+    height: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $scrollbar-color;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
