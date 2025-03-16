@@ -1,9 +1,14 @@
-
 /* -------------------------------------
    Fonts & Variables
 ------------------------------------- */
 $font-stack: 'rainyhearts', sans-serif;
 $pink: #FF1493;
+$pastel-pink: #FFD1DC;
+$light-pink: #FFC0CB;
+$candle-pink: #FF80AB;
+$candle-stripe: #FF4081;
+$flame-orange: #FF6633;
+$flame-yellow: #FFCC00;
 $cream: #FFF8F0;
 $text-color: #333;
 $secondary-text: #555;
@@ -18,271 +23,265 @@ $scrollbar-color: #fbd3b8;
 
 body {
   font-family: $font-stack;
-  background-color: $cream; // soft coconut cream
+  background-color: $cream;
   color: $text-color;
   line-height: 1.6;
   margin: 0;
-  padding: 0;
+  padding: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ff95cc' fill-opacity='0.1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
-
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $font-stack;
-  text-transform: uppercase;
   letter-spacing: 0.1em;
-  margin: 1em 0 0.5em;
-  color: $pink; // a cute, girly pink
+  margin: 0.5em 0;
+  color: $pink;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 p {
   font-family: $font-stack;
-  font-size: 16px;
-  margin-bottom: 1em;
+  font-size: 14px;
+  margin-bottom: 0.5em;
   color: $secondary-text;
 }
 
 a {
   font-family: $font-stack;
-  color: $pink; // vibrant pink for links
+  color: $pink;
   text-decoration: none;
   border-bottom: 1px dotted $pink;
   transition: color 0.3s ease, border-bottom-color 0.3s ease;
 
   &:hover,
   &:focus {
-    color: $pink;
-    border-bottom-color: $pink;
+    color: #E6027E; // Darker pink
+    border-bottom-color: #E6027E;
   }
 }
 
-blockquote {
-  font-family: $font-stack;
-  font-style: italic;
-  margin: 1em 2em;
-  padding: 0.5em 1em;
-  border-left: 3px solid $pink;
-  background-color: $blockquote-bg;
-}
-
-code {
-  font-family: monospace;
-  background-color: $code-bg;
-  padding: 0.2em 0.4em;
-  border-radius: 4px;
-  color: $code-color;
-}
-
-/* -------------------------------------
-   Main Components
-------------------------------------- */
-
-/* Main Container for Objets */
-.objets {
-  display: flex;
-  flex-direction: column;
-  width: 230px;
-  margin: 0 auto 10px auto;
-  background-color: #c4fff7;
-  font-family: Verdana;
-  font-size: 9px;
-  color: #715796;
-
-  h1 {
-    font-family: Verdana;
-    font-size: 10px;
-    font-weight: normal;
-    margin: 5px auto 0;
-    padding: 2px;
-    letter-spacing: 0.09em;
-    line-height: 0.9em;
-    text-align: center;
-    color: #ffffff;
-    width: 95%;
-    height: 11px;
-    border: 1px solid #715796;
-    background-color: #3e8ac6;
-  }
-}
-
-/* Box */
-.objetinner {
-  display: flex;
-  flex-direction: column;
-  width: 172px;
-  height: 186px;
-  margin: auto;
-  background-image: url('https://i.ibb.co/6PTTHvs/cab.png');
-}
-
-/* Scrolling Tray for Collections */
-.tray {
-  box-sizing: border-box;
-  width: 120px;
-  height: 43px;
-  top: 107px;
-  left: 26px;
-  border: 0;
-  position: relative;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
-  align-items: flex-end;
-  justify-content: center;
-  flex-wrap: wrap;
-
-  img {
-    margin: 3px;
-  }
-
-  /* Chrome, Edge, Safari Scrollbar */
-  &::-webkit-scrollbar {
-    height: 5px;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: $scrollbar-color;
-  }
-  &::-webkit-scrollbar-track {
-    background: transparent;
-  }
-}
-
-/* Area for Your Objets */
-.myobjets {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  flex-wrap: wrap;
-
-  img {
-    margin: 3px;
-  }
-}
-
-/* Global Scrollbar (Firefox) */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: $scrollbar-color;
-}
-
-/* -------------------------------------
-   Layout & Misc
-------------------------------------- */
+/* Container */
 .container {
-  width: 100%;
-  height: 100vh;
-}
-
-.header {
-  padding-top: 120px;
-  max-width: fit-content;
-}
-
-.tamanotchi {
-  position: absolute;
-  margin-left: 800px;
-  margin-top: -80px;
-}
-
-.flex {
-  display: flex;
-  position: relative;
-  justify-content: center;
-}
-
-.left,
-.right {
-  height: 450px;
-  padding: 50px 0;
-  margin: -15px;
-  border: 1px solid transparent;
-}
-
-.mid {
-  display: flex;
-  position: relative;
-  border: 1px double black;
-  background-color: #FFF;
-  width: auto;
-  max-width: 800px;
-  z-index: 2;
-  box-shadow: 10px 10px 0px -4px #B90C80, 10px 10px 0px -3px black;
-}
-
-.box1,
-.box2,
-.box3 {
-  width: 200px;
-  padding: 25px;
-  border: 0;
-}
-
-/* Footer Stuff */
-.overimage {
-  position: relative;
-}
-
-.overimage-flower {
-  position: absolute;
-  z-index: 4;
-  margin: -130px;
-  transform: rotate(-23deg);
-  width: 180px;
-}
-
-.footer {
-  margin: auto;
-  width: 500px;
+  max-width: 600px;
+  margin: 0 auto;
   padding: 20px;
-  z-index: 5;
+  position: relative;
 }
 
-.counter,
-.imood {
-  position: absolute;
-  display: block;
-  margin: -30px;
-  z-index: 5;
-  width: 50px;
+/* Cute Pixel Candles */
+.candles {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin: 0 auto 15px;
+  position: relative;
+  height: 60px;
 }
 
-.imood {
-  border: none;
-  margin-top: 15px;
-}
-
-.moodtext,
-.moodtext::backdrop {
-  background-color: orange;
-}
-
-/* -------------------------------------
-   Lists
-------------------------------------- */
-ul,
-ol {
-  font-family: $font-stack;
-  margin: 1em 0;
-  padding-left: 20px;
-}
-
-ul {
-  list-style: none;
-  padding-left: 0;
-
-  li {
-    position: relative;
-    padding-left: 25px; // space for custom bullet
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 5px;
-      top: 50%;
-      width: 10px;
-      height: 10px;
-      background: url('/images/bullets/U2BbrpL.png') no-repeat center center;
-      transform: translateY(-50%);
+.candle {
+  position: relative;
+  width: 8px;
+  height: 40px;
+  background-color: $candle-pink;
+  image-rendering: pixelated;
+  
+  /* Striped pattern */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 4px,
+      $candle-stripe 4px,
+      $candle-stripe 8px
+    );
+  }
+  
+  /* Pixelated flame */
+  &::after {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 0;
+    width: 8px;
+    height: 12px;
+    background-color: transparent;
+    box-shadow:
+      0px 0px 0 2px $flame-yellow,
+      0px -2px 0 2px $flame-yellow,
+      0px -4px 0 2px $flame-yellow,
+      0px -6px 0 2px $flame-orange,
+      0px -8px 0 2px $flame-orange;
+    animation: cuteFlicker 1s infinite steps(2);
+  }
+  
+  &:nth-child(1) {
+    height: 34px;
+    transform: translateY(15px);
+    
+    &::after {
+      animation-delay: 0.3s;
+      animation-duration: 0.7s;
     }
+  }
+  
+  &:nth-child(2) {
+    height: 44px;
+  }
+  
+  &:nth-child(3) {
+    height: 38px;
+    transform: translateY(8px);
+    
+    &::after {
+      animation-delay: 0.5s;
+      animation-duration: 1.1s;
+    }
+  }
+}
+
+@keyframes cuteFlicker {
+  0% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scaleY(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1.1);
+  }
+}
+
+/* Projects Grid */
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Project Cards */
+.project-card {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px double $pink;
+  background-color: white;
+  box-shadow: 5px 5px 0px -2px $pink, 5px 5px 0px -1px black;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: $light-pink;
+    opacity: 0.5;
+    border-radius: 0 0 10px 10px;
+    z-index: -1;
+  }
+
+  &:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: $pastel-pink;
+    opacity: 0.3;
+    border-radius: 0 0 10px 10px;
+    z-index: -2;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 7px 7px 0px -2px $pink, 7px 7px 0px -1px black;
+  }
+}
+
+/* Project Images */
+.project-image {
+  flex: 0 0 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  padding: 10px;
+  background-color: $pastel-pink;
+  border-radius: 50%;
+  border: 1px dotted $pink;
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  
+  img {
+    max-width: 50px;
+    max-height: 50px;
+    display: block;
+    image-rendering: pixelated;
+  }
+}
+
+/* Project Info */
+.project-info {
+  flex: 1;
+  
+  h2 {
+    font-size: 1.25rem;
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+  
+  p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  background: linear-gradient(45deg, #FF1493, #FF69B4, #FFB6C1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+  filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.15));
+}
+
+/* Font import */
+@font-face {
+  font-family: 'rainyhearts';
+  src: url('src/fonts/rainyhearts.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 480px) {
+  .project-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .project-image {
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 }

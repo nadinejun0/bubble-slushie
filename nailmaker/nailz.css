@@ -207,6 +207,7 @@ ul li::before {
   flex-wrap: wrap;
   gap: 5px;
   border: 1px dotted #FF1493;
+  image-rendering: pixelated;
 }
 
 @media (max-width: 768px) {
@@ -250,6 +251,7 @@ ul li::before {
 #reset img,
 #save img {
   max-width: 90%;
+  image-rendering: pixelated;
 }
 
 /* Gallery styling */
@@ -270,6 +272,7 @@ ul li::before {
   padding: 25px;
   border: 1px dotted transparent;
   z-index: 100;
+  image-rendering: pixelated;
 }
 #drop-zone > img:hover {
   border: 1px dotted #FF1493;

@@ -242,6 +242,8 @@ display: flex;
     gap: 5px;
 
     border: 1px dotted $pink;
+
+  image-rendering: pixelated;
     
   }
 
@@ -292,6 +294,8 @@ display: flex;
 
     img {
         max-width: 90%;
+        image-rendering: pixelated;
+
     }
 }
 
@@ -317,6 +321,8 @@ display: flex;
         padding: 25px;
         border: 1px dotted transparent;
         z-index: 100;
+        image-rendering: pixelated;
+
 
         &:hover {
             border: 1px dotted $pink;
