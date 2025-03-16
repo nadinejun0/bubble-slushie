@@ -1,0 +1,158 @@
+{
+  "personal": {
+    "name": "Jordan Rivers",
+    "email": "jordan.rivers@writewell.com",
+    "location": "Portland, OR (Remote)"
+  },
+  "summary": "Versatile writer with 8+ years of experience spanning journalism, creative fiction, and content marketing. Adept at capturing authentic voices and crafting compelling narratives that engage diverse audiences. Published author with a passion for storytelling that bridges cultural divides and illuminates human experiences.",
+  "jobs": [
+    {
+      "title": "Senior Content Strategist",
+      "company": "Narrative Pulse Media",
+      "type": "Full-time",
+      "location": "Remote",
+      "startDate": "Jun 2020",
+      "endDate": "present",
+      "description": "Lead content strategy and creation for diverse clients across technology, healthcare, and education sectors.",
+      "achievements": [
+        "Developed comprehensive content strategies that increased client organic traffic by an average of 78% within 6 months.",
+        "Created the company's signature 'Story-First SEO' methodology, balancing search optimization with compelling narrative approaches.",
+        "Managed a team of 7 writers, implementing a collaborative workshop process that improved content quality metrics by 42%."
+      ],
+      "skills": [
+        "Content Strategy",
+        "Editorial Direction",
+        "SEO Optimization",
+        "Brand Voice Development",
+        "Editorial Calendar Management"
+      ],
+      "promotions": [],
+      "pageBreak": false
+    },
+    {
+      "title": "Staff Writer",
+      "company": "The Northwest Chronicle",
+      "type": "Full-time",
+      "location": "Portland, OR",
+      "startDate": "Aug 2017",
+      "endDate": "May 2020",
+      "description": "Produced in-depth feature articles and human interest stories for a regional publication with 150,000+ readers.",
+      "achievements": [
+        "Authored a 5-part investigative series on urban housing inequality that won a Regional Press Award and led to policy changes.",
+        "Conducted over 200 interviews with subjects from diverse backgrounds, developing a reputation for empathetic and accurate representation.",
+        "Pioneered the publication's digital-first storytelling approach, increasing online readership by 63%."
+      ],
+      "skills": [
+        "Investigative Reporting",
+        "Feature Writing",
+        "Interview Techniques",
+        "Fact Checking",
+        "Multimedia Storytelling"
+      ],
+      "promotions": [
+        {
+          "title": "Senior Staff Writer",
+          "startDate": "Sep 2019",
+          "endDate": "May 2020",
+          "achievements": [
+            "Mentored junior writers and interns in journalistic practices and ethical reporting standards.",
+            "Led the development of the publication's style guide update, incorporating inclusive language practices."
+          ],
+          "skills": [
+            "Editorial Mentorship",
+            "Style Guide Development",
+            "Inclusive Language Practice",
+            "Story Pitching"
+          ]
+        }
+      ],
+      "pageBreak": false
+    },
+    {
+      "title": "Freelance Writer",
+      "company": "Self-employed",
+      "type": "Freelance",
+      "location": "Various Locations",
+      "startDate": "Mar 2015",
+      "endDate": "Aug 2017",
+      "description": "Provided versatile writing services for publications, brands, and creative projects across multiple industries.",
+      "achievements": [
+        "Published over 250 articles in outlets including HuffPost, Medium, and industry-specific journals.",
+        "Ghostwrote two non-fiction books that reached Amazon category bestseller status.",
+        "Developed content strategies for small businesses that doubled their engagement metrics."
+      ],
+      "skills": [
+        "Web Content",
+        "Blog Writing",
+        "Copywriting",
+        "Ghostwriting",
+        "Social Media Content"
+      ],
+      "promotions": [],
+      "pageBreak": false
+    }
+  ],
+  "education": [
+    {
+      "school": "University of Oregon",
+      "degree": "Master of Fine Arts",
+      "field": "Creative Writing",
+      "gpa": "3.92",
+      "startDate": "Sep 2013",
+      "endDate": "Jun 2015",
+      "description": "Focus on narrative non-fiction and short story. Thesis collection 'Ordinary Wonders' received departmental honors. Teaching fellowship in undergraduate composition courses."
+    },
+    {
+      "school": "Reed College",
+      "degree": "Bachelor of Arts",
+      "field": "English Literature",
+      "gpa": "3.8",
+      "startDate": "Aug 2009",
+      "endDate": "May 2013",
+      "description": "Minor in Journalism. Editor of college literary magazine. Thesis: 'Digital Narratives: How Technology is Reshaping Storytelling Conventions.'"
+    }
+  ],
+  "technicalSkills": [
+    "Narrative Writing",
+    "Content Strategy",
+    "SEO Writing",
+    "Copywriting",
+    "Editing",
+    "Interviewing",
+    "Research Methods",
+    "AP Style",
+    "Chicago Manual of Style",
+    "WordPress",
+    "Google Analytics",
+    "Ahrefs",
+    "Content Management Systems",
+    "Adobe Creative Suite",
+    "Social Media Platforms"
+  ],
+  "hobbies": [
+    "Literary Fiction Writing",
+    "Bookbinding",
+    "Literary Festival Attendance",
+    "Community Workshop Facilitation",
+    "Letterpress Printing"
+  ],
+  "visibility": {
+    "summary": true,
+    "experience": true,
+    "education": true,
+    "skills": true,
+    "hobbies": true
+  },
+  "styling": {
+    "primaryColor": "#2F5373",
+    "primaryLight": "#2F53731A",
+    "headingFont": "'Atkinson Hyperlegible Mono', monospace",
+    "bodyFont": "'Atkinson Hyperlegible Mono', monospace",
+    "borderStyle": "right"
+  },
+  "sectionTitles": {
+    "education": "Education & Training",
+    "skills": "Professional Skills",
+    "hobbies": "Creative Pursuits"
+  }
+}

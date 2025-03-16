@@ -1,0 +1,147 @@
+{
+  "personal": {
+    "name": "Alex Morgan",
+    "email": "alex.morgan@example.com",
+    "location": "Seattle, WA (Remote)"
+  },
+  "summary": "Software engineer with 6+ years of experience in full-stack development, specializing in React, Node.js, and serverless architectures. Passionate about creating scalable, maintainable software solutions that provide exceptional user experiences.",
+  "jobs": [
+    {
+      "title": "Senior Software Engineer",
+      "company": "TechInnovate Solutions",
+      "type": "Full-time",
+      "location": "Seattle, WA (Remote)",
+      "startDate": "Jan 2022",
+      "endDate": "present",
+      "description": "Lead engineer for the company's flagship product, a SaaS platform serving enterprise clients.",
+      "achievements": [
+        "Architected and implemented a microservices-based backend that improved system reliability by 35%.",
+        "Led migration from a monolithic architecture to a more scalable, distributed system using AWS Lambda and API Gateway.",
+        "Mentored junior developers and established code quality standards that reduced bug reports by 40%."
+      ],
+      "skills": [
+        "React",
+        "Node.js",
+        "TypeScript",
+        "AWS",
+        "Microservices"
+      ],
+      "promotions": [],
+      "pageBreak": false
+    },
+    {
+      "title": "Full Stack Developer",
+      "company": "Nexus Digital",
+      "type": "Full-time",
+      "location": "Portland, OR",
+      "startDate": "Mar 2019",
+      "endDate": "Dec 2021",
+      "description": "Worked on multiple client projects across various industries, focusing on modern web applications.",
+      "achievements": [
+        "Developed an e-commerce platform that increased client's online sales by 150% within six months.",
+        "Implemented CI/CD pipelines that reduced deployment times by 70%.",
+        "Optimized database queries resulting in a 45% performance improvement on high-traffic pages."
+      ],
+      "skills": [
+        "JavaScript",
+        "React",
+        "Express",
+        "MongoDB",
+        "Docker"
+      ],
+      "promotions": [
+        {
+          "title": "Senior Developer",
+          "startDate": "Jul 2020",
+          "endDate": "Dec 2021",
+          "achievements": [
+            "Led a team of 5 developers on a major client project.",
+            "Introduced automated testing practices that improved code coverage from 30% to 85%."
+          ],
+          "skills": [
+            "Team Leadership",
+            "Project Management",
+            "Jest",
+            "Cypress"
+          ]
+        }
+      ],
+      "pageBreak": false
+    },
+    {
+      "title": "Frontend Developer",
+      "company": "WebCraft Studios",
+      "type": "Full-time",
+      "location": "San Francisco, CA",
+      "startDate": "Jun 2017",
+      "endDate": "Feb 2019",
+      "description": "Focused on creating responsive, user-friendly interfaces for web applications.",
+      "achievements": [
+        "Developed a component library that was used across multiple client projects, reducing development time by 30%.",
+        "Implemented accessibility improvements that helped clients meet WCAG 2.1 AA standards.",
+        "Collaborated closely with UI/UX designers to translate mockups into functional interfaces."
+      ],
+      "skills": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "React",
+        "Sass"
+      ],
+      "promotions": [],
+      "pageBreak": false
+    }
+  ],
+  "education": [
+    {
+      "school": "University of Washington",
+      "degree": "Bachelor of Science",
+      "field": "Computer Science",
+      "gpa": "3.8",
+      "startDate": "Sep 2013",
+      "endDate": "May 2017",
+      "description": "Coursework included Data Structures, Algorithms, Database Systems, and Software Engineering. Active member of the Computer Science Club."
+    }
+  ],
+  "technicalSkills": [
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Node.js",
+    "Express",
+    "AWS",
+    "Docker",
+    "MongoDB",
+    "PostgreSQL",
+    "GraphQL",
+    "REST APIs",
+    "Git",
+    "CI/CD"
+  ],
+  "hobbies": [
+    "Open Source Contributing",
+    "Hiking",
+    "Photography",
+    "Reading",
+    "Chess"
+  ],
+  "visibility": {
+    "summary": true,
+    "experience": true,
+    "education": true,
+    "skills": true,
+    "hobbies": true
+  },
+  "styling": {
+    "primaryColor": "#0073e6",
+    "primaryLight": "#0073e61A",
+    "headingFont": "'Atkinson Hyperlegible Mono', monospace",
+    "bodyFont": "'Atkinson Hyperlegible Mono', monospace",
+    "borderStyle": "both"
+  },
+  "sectionTitles": {
+    "education": "Education",
+    "skills": "Technical Skills",
+    "hobbies": "Interests & Activities"
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "personal": {
+    "name": "Celeste Moonflower",
+    "email": "celeste@cosmic-wisdom.net",
+    "location": "Sedona, AZ (Ethereal)"
+  },
+  "summary": "Intuitive astrologer and spiritual practitioner with 12+ years navigating celestial energies and guiding seekers through cosmic journeys. Specializing in natal chart analysis, tarot readings, and lunar cycle attunement. Dedicated to illuminating soul paths and facilitating spiritual awakening through ancient wisdom and modern interpretations.",
+  "jobs": [
+    {
+      "title": "Celestial Guide & Proprietor",
+      "company": "Moonstone Mystic Sanctuary",
+      "type": "Self-employed",
+      "location": "Sedona, AZ",
+      "startDate": "Apr 2017",
+      "endDate": "present",
+      "description": "Founded and operate a holistic spiritual practice offering personalized astrological readings, energy healing sessions, and metaphysical education.",
+      "achievements": [
+        "Cultivated a devoted clientele of 500+ seekers with a 92% return rate through authentic guidance and transformative experiences.",
+        "Developed a unique synthesis of traditional astrology, ancient mysticism, and quantum energy principles that resonates with modern spiritual seekers.",
+        "Created and facilitated 'Cosmic Consciousness' workshops during key astrological transits, attracting participants from across 12 countries."
+      ],
+      "skills": [
+        "Natal Chart Analysis",
+        "Tarot & Oracle Reading",
+        "Energy Healing",
+        "Akashic Records",
+        "Manifestation Guidance"
+      ],
+      "promotions": [],
+      "pageBreak": false
+    },
+    {
+      "title": "Astrological Consultant",
+      "company": "Stargate Spiritual Center",
+      "type": "Contract",
+      "location": "Tucson, AZ",
+      "startDate": "Sep 2014",
+      "endDate": "Mar 2017",
+      "description": "Provided celestial guidance and spiritual counseling to center visitors seeking alignment with cosmic energies.",
+      "achievements": [
+        "Conducted over 1,200 personalized astrological readings with emphasis on planetary transits and spiritual evolution paths.",
+        "Authored a monthly 'Celestial Forecast' newsletter reaching 3,000+ subscribers with 78% open rate.",
+        "Developed a 7-part workshop series on 'Living in Harmony with Planetary Energies' that became the center's most attended program."
+      ],
+      "skills": [
+        "Astrocartography",
+        "Lunar Cycle Wisdom",
+        "Past Life Regression",
+        "Chakra Balancing",
+        "Spiritual Counseling"
+      ],
+      "promotions": [
+        {
+          "title": "Lead Cosmic Counselor",
+          "startDate": "May 2016",
+          "endDate": "Mar 2017",
+          "achievements": [
+            "Mentored 5 apprentice astrologers in developing their cosmic interpretation abilities and client rapport.",
+            "Designed and implemented the center's 'Celestial Certification Program' that trained 28 practitioners in first two cycles."
+          ],
+          "skills": [
+            "Esoteric Mentoring",
+            "Curriculum Development",
+            "Hermetic Principles",
+            "Transmission of Ancient Wisdom"
+          ]
+        }
+      ],
+      "pageBreak": false
+    },
+    {
+      "title": "Crystal Healer & Aura Interpreter",
+      "company": "Ethereal Vibrations",
+      "type": "Part-time",
+      "location": "Santa Fe, NM",
+      "startDate": "Nov 2011",
+      "endDate": "Aug 2014",
+      "description": "Facilitated energy healing sessions incorporating crystal therapy, aura reading, and astrological timing.",
+      "achievements": [
+        "Pioneered the integration of birth chart elements with crystal selection, creating personalized healing protocols for clients.",
+        "Developed a signature 'Planetary Chakra Alignment' technique that harmonizes personal energy with cosmic influences.",
+        "Co-created the annual 'Celestial Solstice Ceremony' that became a community tradition with 200+ attendees."
+      ],
+      "skills": [
+        "Crystal Gridwork",
+        "Aura Photography Analysis",
+        "Sound Healing",
+        "Ritual Facilitation",
+        "Quantum Meditation"
+      ],
+      "promotions": [],
+      "pageBreak": false
+    }
+  ],
+  "education": [
+    {
+      "school": "Cosmic Wisdom Academy",
+      "degree": "Master Certification",
+      "field": "Esoteric Astrology",
+      "gpa": "",
+      "startDate": "Jan 2013",
+      "endDate": "Dec 2015",
+      "description": "Advanced study of planetary systems, cosmic cycles, and spiritual interpretation methodologies under renowned astrologer Diana Starlight. Thesis project: 'The Pluto Return: America's Spiritual Transformation Through Cosmic Crisis.'"
+    },
+    {
+      "school": "Temple of Lunar Mysteries",
+      "degree": "Initiation & Certification",
+      "field": "Ancient Mystical Arts",
+      "gpa": "",
+      "startDate": "Mar 2010",
+      "endDate": "Apr 2012",
+      "description": "Intensive training in tarot divination, lunar magic, and sacred geometry. Received full moon initiation into the Inner Circle of Celestial Keepers."
+    }
+  ],
+  "technicalSkills": [
+    "Natal Chart Analysis",
+    "Evolutionary Astrology",
+    "Tarot & Oracle Cards",
+    "Crystal Healing",
+    "Lunar Cycle Working",
+    "Akashic Records",
+    "Shamanic Journeying",
+    "Chakra Balancing",
+    "Reiki Mastery",
+    "Ceremonial Magic",
+    "Meditation Guidance",
+    "Ancient Symbology",
+    "Solar Arc Progressions",
+    "Hermetic Principles",
+    "Cosmic Channeling"
+  ],
+  "hobbies": [
+    "Full Moon Ceremonies",
+    "Herbalism",
+    "Sacred Site Pilgrimages",
+    "Tibetan Singing Bowls",
+    "Dream Interpretation"
+  ],
+  "visibility": {
+    "summary": true,
+    "experience": true,
+    "education": true,
+    "skills": true,
+    "hobbies": true
+  },
+  "styling": {
+    "primaryColor": "#9966CC",
+    "primaryLight": "#9966CC1A",
+    "headingFont": "'Courier New', monospace",
+    "bodyFont": "'Courier New', monospace",
+    "borderStyle": "both"
+  },
+  "sectionTitles": {
+    "education": "Mystical Education & Initiations",
+    "skills": "Cosmic & Healing Abilities",
+    "hobbies": "Spiritual Practices"
+  }
+}

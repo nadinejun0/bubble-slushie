@@ -1,0 +1,149 @@
+{
+  "personal": {
+    "name": "Riley Chen",
+    "email": "riley.chen@design.io",
+    "location": "San Francisco, CA (Hybrid)"
+  },
+  "summary": "User-centered UI/UX designer with 7+ years of experience crafting intuitive digital experiences. Specializing in design systems, accessibility, and user research. Passionate about creating products that balance aesthetic appeal with functional usability across platforms.",
+  "jobs": [
+    {
+      "title": "Senior UX Designer",
+      "company": "Pixel Perfect Design Co.",
+      "type": "Full-time",
+      "location": "San Francisco, CA",
+      "startDate": "Mar 2021",
+      "endDate": "present",
+      "description": "Lead designer for enterprise SaaS applications and consumer-facing mobile products.",
+      "achievements": [
+        "Designed and implemented a comprehensive design system that reduced inconsistencies by 75% and increased development velocity by 40%.",
+        "Led UX research initiatives that increased user retention by 35% through data-driven design improvements.",
+        "Mentored junior designers and established a design critique process that improved team collaboration and output quality."
+      ],
+      "skills": [
+        "Figma",
+        "Design Systems",
+        "User Research",
+        "Prototyping",
+        "Usability Testing"
+      ],
+      "promotions": [],
+      "pageBreak": false
+    },
+    {
+      "title": "Product Designer",
+      "company": "InnovateTech Solutions",
+      "type": "Full-time",
+      "location": "Oakland, CA",
+      "startDate": "Jun 2018",
+      "endDate": "Feb 2021",
+      "description": "Created user interfaces and experiences for mobile and web applications across various industries.",
+      "achievements": [
+        "Redesigned a healthcare app that improved patient engagement by 62% and received industry recognition for accessibility.",
+        "Established a user-centered design process that reduced development rework by 45%.",
+        "Created interactive prototypes that effectively communicated complex interactions to stakeholders and development teams."
+      ],
+      "skills": [
+        "Sketch",
+        "Adobe XD",
+        "Prototyping",
+        "Wireframing",
+        "User Flows"
+      ],
+      "promotions": [
+        {
+          "title": "Senior Product Designer",
+          "startDate": "Oct 2019",
+          "endDate": "Feb 2021",
+          "achievements": [
+            "Led the design team for a major fintech client project with over 3 million users.",
+            "Integrated accessibility standards (WCAG 2.1) into design processes, making products more inclusive."
+          ],
+          "skills": [
+            "Team Leadership",
+            "Accessibility",
+            "Design Strategy",
+            "Presentation Skills"
+          ]
+        }
+      ],
+      "pageBreak": false
+    },
+    {
+      "title": "UI Designer",
+      "company": "Digital Frontier",
+      "type": "Full-time",
+      "location": "Los Angeles, CA",
+      "startDate": "Aug 2016",
+      "endDate": "May 2018",
+      "description": "Designed user interfaces for web applications and marketing websites.",
+      "achievements": [
+        "Created styleguides and component libraries that were implemented across 15+ client projects.",
+        "Collaborated closely with developers to ensure design fidelity during implementation.",
+        "Redesigned company website resulting in a 50% increase in client inquiries."
+      ],
+      "skills": [
+        "Adobe Creative Suite",
+        "HTML/CSS",
+        "Responsive Design",
+        "UI Animation",
+        "Visual Design"
+      ],
+      "promotions": [],
+      "pageBreak": false
+    }
+  ],
+  "education": [
+    {
+      "school": "California College of the Arts",
+      "degree": "Bachelor of Fine Arts",
+      "field": "Interaction Design",
+      "gpa": "3.9",
+      "startDate": "Sep 2012",
+      "endDate": "May 2016",
+      "description": "Focus on digital product design, user-centered methodologies, and interaction psychology. Senior project featured in annual design showcase."
+    }
+  ],
+  "technicalSkills": [
+    "Figma",
+    "Sketch",
+    "Adobe XD",
+    "Photoshop",
+    "Illustrator",
+    "Protopie",
+    "InVision",
+    "User Research",
+    "Usability Testing",
+    "Design Systems",
+    "Wireframing",
+    "Information Architecture",
+    "Accessibility",
+    "Design Thinking",
+    "HTML/CSS"
+  ],
+  "hobbies": [
+    "Digital Art",
+    "Typography",
+    "Photography",
+    "Hiking",
+    "Ceramics"
+  ],
+  "visibility": {
+    "summary": true,
+    "experience": true,
+    "education": true,
+    "skills": true,
+    "hobbies": true
+  },
+  "styling": {
+    "primaryColor": "#FF3366",
+    "primaryLight": "#FF33661A",
+    "headingFont": "'Space Mono', monospace",
+    "bodyFont": "'Space Mono', monospace",
+    "borderStyle": "left"
+  },
+  "sectionTitles": {
+    "education": "Education",
+    "skills": "Design & Technical Skills",
+    "hobbies": "Creative Pursuits"
+  }
+}
