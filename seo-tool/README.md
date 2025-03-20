@@ -1,14 +1,13 @@
-# SEO Tool Suite
+# Text Classifier with OpenAI API
 
-A comprehensive collection of SEO tools powered by OpenAI GPT-4 API to help optimize website content, product listings, and more.
+This is a simple web application that uses the OpenAI GPT-4 API to classify text into different categories.
 
 ## Features
 
-- Text and content classification for SEO purposes
-- Product listing optimization and grading
-- Batch processing of multiple items
-- Keyword analysis and optimization
-- SEO scoring and recommendations
+- Classify text into predefined categories (sentiment, content type, topic, intent)
+- Create custom classification categories
+- Get detailed results with confidence scores and explanations
+- Per-field feedback and optimization
 - Simple and intuitive user interface
 
 ## Setup
@@ -27,26 +26,30 @@ npm install
 npm start
 ```
 
-5. Open your browser and navigate to: http://localhost:3000/
+5. Open your browser and navigate to: http://localhost:3000/classify.html
 
 ## Usage
 
 1. Enter your OpenAI API key (you can get one from https://platform.openai.com/api-keys)
-2. Choose from available tools:
-   - Text/Content Classifier: Analyze content for SEO optimization
-   - Product Listing Optimizer: Improve product descriptions for better search ranking
-   - Batch Processor: Process multiple items at once
-3. Follow the instructions for each tool to get SEO recommendations and improvements
+2. Enter the text you want to classify
+3. Select a classification type:
+   - Choose from predefined categories (sentiment, content type, topic, intent)
+   - Or define your own custom categories (comma-separated)
+4. You can:
+   - Click "Classify Text" button for full classification
+   - Click "Classify Text Only" to get feedback on your text
+   - Click "Validate Categories" to check your custom categories
+5. View the detailed classification results
 
 ## How it Works
 
-The application uses a Node.js server to proxy requests to the OpenAI API. The analysis is performed by GPT-4, which evaluates content based on SEO best practices.
+The application uses a Node.js server to proxy requests to the OpenAI API, avoiding CORS issues. The classification is performed by GPT-4, OpenAI's powerful language model.
 
-The tools provide:
-- SEO scores and ratings
-- Specific recommendations for improvement
-- Keyword optimization suggestions
-- Detailed analysis of content performance
+The app provides:
+- A primary classification with confidence score
+- Breakdown of all category scores
+- Explanation of the classification decision
+- Per-field feedback and optimization options
 
 ## Privacy
 
